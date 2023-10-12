@@ -1,0 +1,376 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    background-color: hsl(0, 0%, 98%);
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.darkmode--toggle{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    justify-content: space-between;
+    padding: 0 16px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15);
+}
+
+.header h4{
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.823943661971831rem + 0.7511737089201878vw, 1.5rem);
+}
+
+.darkmode--toggle{
+    gap: 8px;
+    cursor: pointer;
+}
+
+.darkmode--logo{
+    width: 25px;
+}
+
+.darkmode--title{
+    margin: 0;
+    font-weight: 600;
+}
+
+main, section{
+    padding: 16px;
+}
+
+main{
+    flex-grow: 1;
+}
+
+input:focus, select:focus{
+    outline: none;
+}
+
+.searchBar{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    gap: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15);
+}
+
+input, button, p{
+    font-family: 'Nunito Sans', sans-serif;
+    color: hsl(200, 15%, 8%);    
+}
+
+.searchLogo--container{
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+    max-width: 70px;
+}
+
+.searchLogo{
+    width: 30px;
+    height: 30px;
+}
+
+.search{
+    border: none;
+    height: 100%;
+    width: 80%;
+}
+
+.sort{
+    width: 200px;
+    padding: 12px;
+    border: none;
+    margin-top: 36px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15);
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.country--tiles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    
+}
+
+.country{
+    background-color: white;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15);
+    border-radius: 5px;
+    width: 80%;
+    max-width: 260px;
+    min-height: 300px;
+    padding-bottom: 18px;
+}
+
+.country--flag{
+    width: 100%;
+    height: 175px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15);
+}
+
+.country--details{
+    padding: 0 32px;
+}
+
+.country--details p, .other--details p{
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.country--fulldetails{
+    margin: 16px 16px 0 auto;
+    width: fit-content;
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.current{
+    padding: 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 450px;
+}
+
+.back--logo{
+    width: 20px;
+    height: 20px;
+}
+
+.current > button{
+    border: none;
+    background-color: white;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.4);
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    font-size: 14px;
+    margin: 16px 0 32px;
+}
+
+.current > button:hover{
+    background-color: ghostwhite;
+}
+
+.current > .country--flag{
+    width: 100%;
+    height: 230px;
+    max-width: 465px;
+    border-radius: 0;
+    margin: 0 auto;
+}
+
+.current > .country--details{
+    padding: 0;
+}
+
+.current > .country--details > h3, .whitespace{
+    font-size: 1.375rem;
+    font-size: clamp(1.375rem, 1.1549295774647887rem + 0.9389671361502347vw, 2rem);
+}
+
+.current > .country--details p,
+.other--details p{
+    line-height: 24px;
+    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 0.7869718309859155rem + 0.3755868544600939vw, 1.125rem);
+}
+
+.border--container{
+    display: flex;
+    flex-flow: row wrap;
+    height: fit-content;
+    gap: 12px;
+}
+
+.borders{
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.6619718309859155rem + 0.3755868544600939vw, 1rem);
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.2);
+    border: 1px solid transparent;
+    padding: 4px 24px;
+    margin: 0;
+    height: fit-content;
+}
+
+.whitespace{
+    display: none;
+}
+
+@media (min-width: 640px){
+    .header, main{
+        padding: 0 80px;
+    }
+
+    section{
+        padding: 0;
+    }
+    
+    .form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 80px;
+    }
+
+    .sort, .search{
+        font-size: 14px;
+    }
+
+    .sort{
+        margin: 0;
+        padding: 16px;
+
+    }
+
+    .searchBar{
+        width: 40%;
+        height: 60px;
+        min-width: 300px;
+    }
+
+    .country--tiles{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+        justify-items: center;
+        align-items: start;
+    }
+
+    .country{
+        width: 100%;
+    }
+
+    /* current */
+    .current{
+        max-width: 480px;
+        grid-area: 1 / 1 / -1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .current > button{
+        grid-column: 1 / 2;
+    }
+
+    .current > .country--flag{
+        width: 100%;
+        max-height: 350px;
+        grid-column: 1 / -1;
+    }
+    
+    .current > .country--details{
+        justify-self: center;
+    }
+    
+    .other--details{
+        justify-self: center;
+    }
+
+    .whitespace{
+        display: block;
+        color: transparent;
+    }
+
+    .border--tile{
+        grid-column: 1 / -1;
+        justify-self: start;
+        padding-left: 18px;
+    }
+
+}
+
+@media (min-width: 1100px){
+
+    .current{
+        max-width: none;
+        grid-template-columns: 2fr .25fr 1fr 1fr;
+        grid-template-rows: .5fr 1fr 1fr;
+    }
+
+    .current > button{
+        grid-column: 1 / -1;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 5px;
+        height: 40px;
+        width: 125px;
+        align-self: center;
+    }
+
+    .current > .country--flag{
+        grid-area: 2 / 1 / 5 / 2;
+        height: auto;
+        max-width: none;
+        max-height: 400px;
+        align-self: start;
+    }
+
+    .current > .country--details{
+        grid-column: 3 / 4;
+        justify-self: start
+    }
+
+    .border--tile{
+        grid-column: 3 / -1;
+        display: flex;
+        gap: 16px;
+        justify-self: start;
+        padding-left: 0;
+    }
+
+    .border--title{
+        text-wrap: nowrap;
+        margin-top: 0;
+    }
+}
+
+/* darkmode */
+.darkelement, .borders .darkelement{
+    color: white;
+    background-color: hsl(209, 23%, 22%);
+}
+
+.darkelement p{
+    color: white;
+}
+
+.darkbackground{
+    background-color: hsl(207, 26%, 17%);
+    color: white;
+}
+
+.darkcurrent p{
+    color: white;
+}
+
+.darkbutton{
+    color: white;
+    background-color: hsl(209, 23%, 22%) !important;
+}
